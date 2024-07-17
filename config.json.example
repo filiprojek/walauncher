@@ -1,0 +1,14 @@
+{
+    "apps": [
+        {
+            "name": "Some service",
+            "img": "image_name.jpg",
+            "url": "http://localhost:8000/"
+        },
+        {
+            "name": "Some service",
+            "img": "image_name.jpg",
+            "url": "http://localhost:8100/"
+        }
+    ]
+}
