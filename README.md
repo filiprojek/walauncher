@@ -19,7 +19,6 @@ walauncher is a web-based launcher designed as an alternative to [Muximux](https
    Create a `docker-compose.yaml` file in your project directory:
 
    ```yaml
-   version: '3'
    services:
      walauncher:
        image: filiprojek/walauncher:latest
