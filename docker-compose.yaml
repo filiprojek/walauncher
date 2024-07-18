@@ -1,0 +1,9 @@
+services:
+  walauncher:
+    image: walauncher
+    ports:
+      - 5200:80
+    volumes:
+      - ./walauncher/config.json:/var/www/html/config.json
+      - ./walauncher/img/:/var/www/html/img/
+
