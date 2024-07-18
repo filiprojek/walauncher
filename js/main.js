@@ -61,11 +61,11 @@ async function main() {
 		const app = config.apps[i];
 		main_div.innerHTML += app_template(
 			app.name,
-			`/icons/${app.img}`,
+			`/img/${app.img}`,
 			`${app.name} logo`,
 		);
 
-		nav_div.innerHTML += nav_template(app.name, `/icons/${app.img}`);
+		nav_div.innerHTML += nav_template(app.name, `/img/${app.img}`);
 
 		setTimeout(() => {
 			const app_div = document.querySelector(`#${app.name}`);

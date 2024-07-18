@@ -1,4 +1,4 @@
 *.old
 config.json
-icons/*
-!icons/image_name.jpg
+img/*
+!img/image_name.jpg
