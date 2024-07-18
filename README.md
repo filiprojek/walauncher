@@ -2,6 +2,14 @@
 
 walauncher is a web-based launcher designed as an alternative to [Muximux](https://github.com/mescon/Muximux), primarily used for managing various web services like Servarr apps. However, it can be configured to launch and manage any web application.
 
+## Screenshots
+
+![Home page](https://i.postimg.cc/0ynpKwzQ/2024-07-17-22-50-53.png)
+*In app view*
+
+![Apps overview](https://i.postimg.cc/pLRfdZX4/2024-07-17-22-51-56.png)
+*In app view*
+
 ## Usage
 
 ### Using Docker
