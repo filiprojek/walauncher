@@ -1,6 +1,6 @@
-# walauncher
+# WALauncher
 
-walauncher is a web-based launcher designed as an alternative to [Muximux](https://github.com/mescon/Muximux), primarily used for managing various web services like Servarr apps. However, it can be configured to launch and manage any web application.
+WALauncher is a web-based launcher designed as an alternative to [Muximux](https://github.com/mescon/Muximux), primarily used for managing various web services like Servarr apps. However, it can be configured to launch and manage any web application.
 
 ## Screenshots
 
@@ -110,6 +110,47 @@ walauncher is a web-based launcher designed as an alternative to [Muximux](https
 4. **Start the Web Server**
 
    Once configured, start your web server to serve walauncher.
+
+## Configuration
+
+WALauncher supports additional optional configuration options to enhance customization. These options allow you to modify the behavior and appearance of the web application by adding an options object in the `config.json` file
+
+### Example `config.json` with Options
+
+```json
+{
+    "apps": [
+        {
+            "name": "Some service",
+            "img": "image_name.jpg",
+            "url": "http://localhost:8000/"
+        },
+        {
+            "name": "Some service",
+            "img": "image_name.jpg",
+            "url": "http://localhost:8100/"
+        }
+    ],
+    "options": {
+        "footer": true,
+        "footertext": "Your customized footer where you can use <strong>HTML</strong>",
+        "title": "My Home Launcher"
+    }
+}
+```
+
+### Options
+
+- **footer** (boolean, default: `true`): Control the visibility of the footer.
+  - Set `footer` to `false` to hide the footer completely from the site.
+
+- **footertext** (string, optional): Customize the content of the footer.
+  - Use this option to provide custom text for the footer. You can use HTML for formatting.
+
+- **title** (string, optional): Customize the document title.
+  - Change `title` to another value to customize the title displayed in the browser's title bar.
+
+These options are entirely optional. If not specified, the default behavior will be applied.
 
 ## Contributing
 
