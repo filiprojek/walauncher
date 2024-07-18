@@ -1,5 +1,6 @@
 const main_div = document.querySelector("main");
 const nav_div = document.querySelector("header ul");
+const footerp = document.querySelector("#ft-version");
 let config = null;
 
 function app_template(name, img_src, img_alt) {
@@ -62,7 +63,6 @@ async function main() {
 	/** Options part **/
 	if (config.options) {
 		/* Footer script */
-		const footerp = document.querySelector("#ft-version");
 		if (config.options.footertext) {
 			footerp.innerHTML = config.options.footertext;
 		} else {
@@ -78,6 +78,9 @@ async function main() {
 		if (config.options.title) {
 			document.title = config.options.title;
 		}
+	} else {
+		// print correct version
+		footerp.innerHTML = footerp.innerHTML.replace("v0.0.0", version);
 	}
 
 	/* main part */
