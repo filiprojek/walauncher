@@ -22,7 +22,7 @@ body {
     flex-direction: column;
 }
 
-a, p, b {
+p, b {
     color: white;
     text-decoration: none;
     cursor: pointer;
@@ -30,6 +30,10 @@ a, p, b {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+a {
+    color: white;
 }
 
 /* header */
@@ -49,7 +53,7 @@ header li:hover {
 header li {
     list-style-type: none;
     background-color: var(--clr-primary);
-    height: 4rem;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -101,6 +105,12 @@ main .app img {
 
 main iframe {
     width: 100vw;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 1rem;
 }
 
 /* home - first screen */

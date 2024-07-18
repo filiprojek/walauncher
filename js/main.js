@@ -56,7 +56,31 @@ function load_app(app_name, app_url) {
 async function main() {
 	const req = await fetch("/config.json");
 	config = await req.json();
+	const reqVer = await fetch("/version");
+	const version = await reqVer.text();
 
+	/** Options part **/
+	if (config.options) {
+		/* Footer script */
+		const footerp = document.querySelector("#ft-version");
+		if (config.options.footertext) {
+			footerp.innerHTML = config.options.footertext;
+		} else {
+			// print correct version
+			footerp.innerHTML = footerp.innerHTML.replace("v0.0.0", version);
+		}
+		// hide footer if requested
+		if (config.options.footer === false) {
+			document.querySelector("footer").style.display = "none";
+		}
+
+		/* change title */
+		if (config.options.title) {
+			document.title = config.options.title;
+		}
+	}
+
+	/* main part */
 	for (let i = 0; i < config.apps.length; i++) {
 		const app = config.apps[i];
 		main_div.innerHTML += app_template(
@@ -74,12 +98,14 @@ async function main() {
 				load_app(app.name, app.url);
 				document.querySelector("header").classList.remove("invisible");
 				main_div.classList.remove("home");
+				document.querySelector("footer").style.display = "none";
 			});
 
 			const li = document.querySelector(`#li_${app.name.toLowerCase()}`);
 			li.addEventListener("click", () => {
 				load_app(app.name, app.url);
 				document.querySelector("header").classList.remove("invisible");
+				document.querySelector("footer").style.display = "none";
 			});
 		}, 0);
 	}
