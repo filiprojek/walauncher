@@ -4,10 +4,10 @@ walauncher is a web-based launcher designed as an alternative to [Muximux](https
 
 ## Screenshots
 
-![Home page](https://i.postimg.cc/0ynpKwzQ/2024-07-17-22-50-53.png)
+![Home page](.screenshots/home.png)
 *In app view*
 
-![Apps overview](https://i.postimg.cc/pLRfdZX4/2024-07-17-22-51-56.png)
+![Apps overview](.screenshots/apps.png)
 *In app view*
 
 ## Usage
