@@ -14,7 +14,10 @@ function app_template(name, img_src, img_alt) {
 
 function nav_template(name, img_url) {
 	return `
-        <li id="li_${name.toLowerCase()}"><span><img src="${img_url}" alt=""><p>${name}</p></span></li>
+        <li id="li_${name.toLowerCase()}">
+			<img src="${img_url}" alt="${name} icon" onerror="this.remove();">
+			<span class="text">${name}</span>
+		</li>
     `;
 }
 
