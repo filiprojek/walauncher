@@ -22,7 +22,7 @@ body {
     flex-direction: column;
 }
 
-p, b {
+p, b, .text {
     color: white;
     text-decoration: none;
     cursor: pointer;
@@ -57,15 +57,10 @@ header li {
     display: flex;
     align-items: center;
     padding: 0 1rem;
-}
-
-header li span {
-    display: flex;
-    align-items: center;
     gap: .5rem;
 }
 
-header li span img {
+header li img {
     height: 1.6rem;
 }
 
