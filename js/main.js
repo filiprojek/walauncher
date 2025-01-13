@@ -38,7 +38,7 @@ function load_app(app_name, app_url) {
 
 	if (!frame_exists) {
 		main_div.innerHTML += `
-        <iframe src="${app_url}" id="if_${app_name.toLowerCase()}"></iframe>
+        <iframe src="${app_url}" id="if_${app_name.toLowerCase()}" frameBorder="0"></iframe>
     `;
 	}
 
@@ -105,6 +105,8 @@ async function main() {
 				document.querySelector("header").classList.remove("invisible");
 				main_div.classList.remove("home");
 				document.querySelector("footer").style.display = "none";
+				document.querySelector("ul").classList.remove("mobile-nav-active");
+				window.scrollTo(0, 0);
 			});
 
 			const li = document.querySelector(`#li_${app.name.toLowerCase()}`);
@@ -112,8 +114,47 @@ async function main() {
 				load_app(app.name, app.url);
 				document.querySelector("header").classList.remove("invisible");
 				document.querySelector("footer").style.display = "none";
+				document.querySelector("ul").classList.remove("mobile-nav-active");
+				window.scrollTo(0, 0);
 			});
 		}, 0);
 	}
+
+	/* reload active iframe */
+	const btn_reload = document.querySelector("#nav_reload");
+	btn_reload.addEventListener("click", () => {
+		const active_if = document
+			.querySelector("li.active")
+			.id.replace("li", "if");
+		document.querySelector(`#${active_if}`).src += "";
+	});
+
+	document.addEventListener("keydown", (e) => {
+		if (e.key === "F5") {
+			e.preventDefault();
+			const active_if = document
+				.querySelector("li.active")
+				.id.replace("li", "if");
+			document.querySelector(`#${active_if}`).src += "";
+		}
+	});
+
+	/* reload launcher */
+	const nav_home = document.querySelector("#nav_home");
+	nav_home.addEventListener("click", () => {
+		location.reload();
+	});
+
+	/* display mobile menu */
+	const nav_menu = document.querySelector("#nav_menu");
+	const ul = document.querySelector("ul");
+
+	nav_menu.addEventListener("click", () => {
+		if (ul.classList.contains("mobile-nav-active")) {
+			ul.classList.remove("mobile-nav-active");
+		} else {
+			ul.classList.add("mobile-nav-active");
+		}
+	});
 }
 main();

@@ -1,0 +1,54 @@
+@media only screen and (min-width: 0px) and (max-width: 1090px) {
+  body {
+    min-height: 100dvh;
+  }
+
+  .nav-btn,
+  .nav-logo {
+    height: 2rem;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    padding: .5rem 1rem;
+    background-color: var(--clr-primary);
+  }
+
+  header ul {
+    display: none;
+  }
+
+  header .mobile-nav {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  header .nav-logo {
+    position: absolute;
+    left: 1rem;
+    height: 2rem;
+  }
+
+  main.home {
+    height: auto !important;
+    padding: 2rem 0 1rem 0;
+  }
+
+  .mobile-nav-active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: auto;
+    right: 0;
+  }
+
+  .mobile-nav-active li {
+    width: 100%;
+  }
+}
