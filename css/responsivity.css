@@ -52,3 +52,9 @@
     width: 100%;
   }
 }
+
+@media only screen and (min-width: 1091px) {
+  .mobile-nav {
+    display: none;
+  }
+}
