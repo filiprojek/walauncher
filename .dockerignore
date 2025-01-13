@@ -2,3 +2,5 @@ config.json
 config.json.example
 .screenshots/
 README.md
+.git
+.gitignore
