@@ -121,12 +121,14 @@ async function main() {
 	}
 
 	/* reload active iframe */
-	const btn_reload = document.querySelector("#nav_reload");
-	btn_reload.addEventListener("click", () => {
-		const active_if = document
-			.querySelector("li.active")
-			.id.replace("li", "if");
-		document.querySelector(`#${active_if}`).src += "";
+	const btn_reload = document.querySelectorAll("#nav_reload");
+	btn_reload.forEach((el) => {
+		el.addEventListener("click", () => {
+			const active_if = document
+				.querySelector("li.active")
+				.id.replace("li", "if");
+			document.querySelector(`#${active_if}`).src += "";
+		});
 	});
 
 	document.addEventListener("keydown", (e) => {

@@ -51,10 +51,19 @@
   .mobile-nav-active li {
     width: 100%;
   }
+
+  header ul #li_nav_reload {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1091px) {
   .mobile-nav {
     display: none;
+  }
+
+  header ul #li_nav_reload:nth-child(1) {
+    order: 1;
+    margin-left: auto;
   }
 }
