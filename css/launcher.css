@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 * {
     padding: 0;
@@ -7,12 +7,13 @@
 }
 
 :root {
-    --clr-primary: #161B22;
+    --clr-primary: #161b22;
     --clr-secondary: #2b323b;
     --clr-background: #010409;
 }
 
-html, body {
+html,
+body {
     height: 100vh;
 }
 
@@ -22,7 +23,9 @@ body {
     flex-direction: column;
 }
 
-p, b, .text {
+p,
+b,
+.text {
     color: white;
     text-decoration: none;
     cursor: pointer;
@@ -65,7 +68,7 @@ header li img {
 }
 
 .invisible {
-     display: none; 
+    display: none;
 }
 
 .active {
@@ -112,6 +115,7 @@ footer {
 .home {
     align-items: center;
 }
+
 .home .app {
     height: 10rem !important;
 }
