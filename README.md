@@ -4,11 +4,14 @@ WALauncher is a web-based launcher designed as an alternative to [Muximux](https
 
 ## Screenshots
 
+#### Desktop home page view
 ![Home page](.screenshots/home.png)
-*Home page view*
 
+#### Desktop in app view
 ![Apps overview](.screenshots/apps.png)
-*In app view*
+
+#### Mobile app view
+![Apps overview on mobile](.screenshots/mobile.jpg)
 
 ## Usage
 
