@@ -1,4 +1,4 @@
-FROM php:8.0-apache
+FROM jitesoft/lighttpd:latest
 
 WORKDIR /var/www/html
 
