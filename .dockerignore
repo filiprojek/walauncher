@@ -4,5 +4,7 @@ config.json.example
 README.md
 .git
 .gitignore
+.github
+.gitea
 Dockerfile
 docker-compose.yaml
