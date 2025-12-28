@@ -46,6 +46,7 @@
     position: absolute;
     width: auto;
     right: 0;
+    margin-top: .5rem;
   }
 
   .mobile-nav-active li {
