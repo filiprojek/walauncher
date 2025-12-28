@@ -28,7 +28,6 @@ b,
 .text {
     color: white;
     text-decoration: none;
-    cursor: pointer;
     user-select: none;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -46,6 +45,7 @@ header ul {
     flex-direction: row;
     width: 100vw;
     background-color: var(--clr-primary);
+    cursor: pointer;
 }
 header li {
     list-style-type: none;
@@ -60,6 +60,10 @@ header li:hover, header li.active {
 }
 header li img {
     height: 1.6rem;
+}
+
+header .mobile-nav img {
+    cursor: pointer;
 }
 
 .invisible {
